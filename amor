@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Um Pedido Especial 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(180deg, #fdecef, #fff);
+      color: #4a2c2a;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      color: #b94b6b;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-style: italic;
+      margin-bottom: 40px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 25px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
+    }
+    .heart {
+      font-size: 2rem;
+      margin: 20px 0;
+    }
+    .proposal {
+      background: #fdecef;
+      border-radius: 25px;
+      padding: 40px 25px;
+      font-size: 1.2rem;
+      margin-top: 30px;
+    }
+    .name {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.2rem;
+      color: #b94b6b;
+    }
+    .buttons {
+      margin-top: 30px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      margin: 10px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .yes {
+      background: #b94b6b;
+      color: #fff;
+    }
+    .footer {
+      margin-top: 60px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.8rem;
+      color: #b94b6b;
+    }
+
+    /* EFEITO DE CORAÇÕES */
+    .heart-float {
+      position: fixed;
+      bottom: 0;
+      font-size: 24px;
+      animation: floatUp 3s linear forwards;
+      z-index: 9999;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Para o Meu Amor 💖</h1>
+    <p class="subtitle">Uma página feita com carinho, amor e coragem</p>
+
+    <div class="card">
+      <p>Oi meu amor, eu sei que hoje não é um dia especial, mas todo dia com você é especial. Como eu explico que você é tudo o que eu sempre sonhei? Antes de ser minha namorada, você já era a minha oração.</p>
+      <div class="heart">💗</div>
+      <p>Eu te amo por infinitos motivos, e toda vez que eu vejo seus olhos lindos e esse sorriso que afasta qualquer tristeza, eu me apaixono de novo.</p>
+    </div>
+
+    <div class="proposal">
+      <p>Amor, eu quero te levar pra toda a minha vida.</p>
+      <p>Eu vou te pedir aqui…<br/>e um dia vou te pedir pessoalmente.</p>
+      <p class="name">Hellen Caroline</p>
+      <p><strong>Você quer namorar comigo?</strong> 💍💖</p>
+
+      <div class="buttons">
+        <a class="btn yes" href="#" onclick="aceitouPedido(); return false;">SIM 💖</a>
+      </div>
+    </div>
+
+    <div class="footer">Eu te amo, amor. 💕</div>
+  </div>
+
+  <!-- SCRIPT NO FINAL PARA GARANTIR ESCOPO GLOBAL -->
+  <script>
+    function soltarCoracoes() {
+      for (let i = 0; i < 25; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart-float';
+        heart.innerText = '💖';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (2 + Math.random() * 2) + 's';
+        document.body.appendChild(heart);
+        setTimeout(function () {
+          heart.remove();
+        }, 3000);
+      }
+    }
+
+    function aceitouPedido() {
+      soltarCoracoes();
+      setTimeout(function () {
+        alert('EU SABIA 💖😭\nAgora oficialmente somos nós dois.');
+      }, 600);
+    }
+  </script>
+</body>
+</html> 
